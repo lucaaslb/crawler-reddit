@@ -4,7 +4,7 @@ import com.lucaaslb.crawler.*;
 
 public class Main {
 
-	private static final String SUBREDDITS = "dog;cat;popular";
+	private static final String SUBREDDITS = "popular";
 
 	public static void main(String[] args) {
 		String subreddit = SUBREDDITS;
@@ -13,13 +13,10 @@ public class Main {
 		case 1:
 			subreddit = args[0];
 			break;
-		default:
-			subreddit = args[0];
-			break;
 		}
 
 		Crawler rastrear = new Crawler();
-		rastrear.search(subreddit);
+		rastrear.searchTop(subreddit, 1, 5000);
 
 		Subreddit sr = rastrear.getSubreddit();
 		System.out.println(sr.printAll());
