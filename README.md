@@ -1,6 +1,6 @@
 # CRAWLER-REDDIT
 
-Developed for practical knowledge.
+Development to practice
 
 Reddit is like a forum with thousands of different categories. With your account, you can browse technical topics, view photos of kittens, discuss philosophy issues, learn some life hacks and stay on the inside of the world news!
 
@@ -12,12 +12,13 @@ The purpose of this api is to fetch Threads in requested Subreddits, the search 
 ## How to use
 
 ```java
-        Crawler cw = new Crawler();
-		cw.search("worldnews");
 
-		Subreddit sr = cw.getSubreddit();
-		System.out.println(sr.printAll());
-});
+    Crawler cw = new Crawler();
+	cw.search("worldnews");
+
+	Subreddit sr = cw.getSubreddit();
+	System.out.println(sr.printAll());
+
 ```
 
 ### Dependencies 
