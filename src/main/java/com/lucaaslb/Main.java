@@ -2,7 +2,7 @@ package com.lucaaslb;
 
 import com.lucaaslb.crawler.*;
 
-public class Main {
+class Main {
 
 	private static final String SUBREDDITS = "popular";
 
