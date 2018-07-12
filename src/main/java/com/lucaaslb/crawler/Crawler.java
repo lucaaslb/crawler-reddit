@@ -152,19 +152,19 @@ public class Crawler {
 		}
 
 	}
-	
+
 	/**
 	 * Receives a string containing subreddits separated by ";" the method will
-	 * populate a subreddit list of each threads with min UPVOTES nformed (TOP) . To recover use
-	 * getSubreddit()
+	 * populate a subreddit list of each threads with min UPVOTES nformed (TOP) . To
+	 * recover use getSubreddit()
 	 * 
 	 * @param subreddit
 	 * @param top
-	 *            1 - day, 2 - week, 3 - month;
+	 *            1 - day, 2 - week, 3 - month
 	 * @param limitUpvote
 	 * 
 	 */
-	public void searchTop(String subreddit, int top, int limitUPVote) {
+	public void searchTop(String subreddit, int top, int limitUpvote) {
 		Thread thread;
 
 		String subredditTitle;
@@ -174,11 +174,9 @@ public class Crawler {
 		String comments;
 
 		String where;
-		
-		
+
 		String[] link = subreddit.split(";");
-		
-		
+
 		switch (top) {
 		case 1:
 			where = DAY;
@@ -208,16 +206,18 @@ public class Crawler {
 					if (!eUpvotes.attr("title").equalsIgnoreCase("")) {
 						upvotes = Integer.parseInt(eUpvotes.attr("title"));
 
-						Elements ePost = article.select("div.thing.link div div p a.title");
-						Elements eComments = article.select("div.thing.link div div ul li a");
+						if (upvotes >= limitUpvote) {
+							Elements ePost = article.select("div.thing.link div div p a.title");
+							Elements eComments = article.select("div.thing.link div div ul li a");
 
-						subredditTitle = link[i].toUpperCase();
-						title = ePost.text();
-						url = ePost.attr("href");
-						comments = eComments.attr("href");
+							subredditTitle = link[i].toUpperCase();
+							title = ePost.text();
+							url = ePost.attr("href");
+							comments = eComments.attr("href");
 
-						thread = new Thread(subredditTitle, title, upvotes, url, comments);
-						this.subreddit.add(thread);
+							thread = new Thread(subredditTitle, title, upvotes, url, comments);
+							this.subreddit.add(thread);
+						}
 
 					}
 				}
@@ -230,7 +230,6 @@ public class Crawler {
 		}
 
 	}
-	
 
 	public Subreddit getSubreddit() {
 		return subreddit;
