@@ -21,8 +21,10 @@ The purpose of this api is to fetch Threads in requested Subreddits, the search 
 
 ```
 
-### Dependencies 
+### Properties 
 
+> JDK - 1.8
+> Maven - 3.5.4
 > JSoup - 1.11.3
 
 
