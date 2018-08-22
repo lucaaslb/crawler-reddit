@@ -2,10 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>crawler-reddit</groupId>
+	<groupId>com.lucaaslb.crawler.reddit</groupId>
 	<artifactId>crawler-reddit</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>crawler-reddit-api</name>
+	<version>1.1-SNAPSHOT</version>
+	<name>crawler-reddit-madefortest</name>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
@@ -24,7 +24,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>crawlers-reddit</finalName>
+		<finalName>crawler-reddit-madefortest</finalName>
 		<plugins>
 
 			<!-- download source code in Eclipse, best practice -->

@@ -11,6 +11,11 @@ The purpose of this api is to fetch Threads in requested Subreddits, the search 
 
 ## How to use
 
+>	<groupId>com.lucaaslb.crawler.reddit</groupId>
+	<artifactId>crawler-reddit</artifactId>
+	<version>1.1-SNAPSHOT</version>
+
+
 ```java
 
     Crawler cw = new Crawler();
@@ -23,9 +28,7 @@ The purpose of this api is to fetch Threads in requested Subreddits, the search 
 
 ### Properties 
 
-> JDK - 1.8
-> Maven - 3.5.4
-> JSoup - 1.11.3
+> JDK - 1.8,  Maven - 3.5.4, JSoup - 1.11.3
 
 
 ### Author
